@@ -1,0 +1,56 @@
+# ──────────────────────────────────────────────
+# Core Framework
+# ──────────────────────────────────────────────
+fastapi>=0.115.0,<1.0.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.0
+pydantic-settings>=2.6.0
+
+# ──────────────────────────────────────────────
+# Auth
+# ──────────────────────────────────────────────
+python-jose[cryptography]>=3.3.0
+bcrypt>=4.2.0
+
+# ──────────────────────────────────────────────
+# Database Clients
+# ──────────────────────────────────────────────
+motor>=3.6.0                 # Async MongoDB driver
+redis>=5.2.0                 # Async Redis (aioredis merged)
+qdrant-client>=1.12.0        # Qdrant vector DB
+pyodbc>=5.2.0                # SQL Server ODBC
+sqlalchemy>=2.0.0            # Required by LlamaIndex SQLDatabase
+
+# ──────────────────────────────────────────────
+# AI / LLM / Embeddings
+# ──────────────────────────────────────────────
+openai>=1.55.0
+llama-index-core>=0.12.0
+llama-index-llms-openai>=0.3.0
+llama-index-embeddings-openai>=0.3.0
+llama-index-vector-stores-qdrant
+
+# ──────────────────────────────────────────────
+# Caching
+# ──────────────────────────────────────────────
+langcache>=0.1.0             # Semantic cache with embedding similarity
+
+# ──────────────────────────────────────────────
+# Logging
+# ──────────────────────────────────────────────
+structlog>=24.4.0
+
+# ──────────────────────────────────────────────
+# Utilities
+# ──────────────────────────────────────────────
+httpx>=0.28.0                # Async HTTP client (web search agent)
+tenacity>=9.0.0              # Retry logic
+pydantic[email]              # For email validation in user models  
+mcp>=1.0.0                   # Model Context Protocol client SDK 
+
+# ──────────────────────────────────────────────
+# Dev / Testing
+# ──────────────────────────────────────────────
+pytest>=8.3.0
+pytest-asyncio>=0.24.0
+httpx                        # TestClient transport
